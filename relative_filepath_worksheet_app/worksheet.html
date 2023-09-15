@@ -9,7 +9,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Internal CSS Method-->
         <style> 
-            @font-face {
+                html, body, div, span, object, iframe,
+                h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                abbr, address, cite, code,
+                del, dfn, em, img, ins, kbd, q, samp,
+                small, strong, sub, sup, var,
+                b, i,
+                dl, dt, dd, ol, ul, li,
+                fieldset, form, label, legend,
+                table, caption, tbody, tfoot, thead, tr, th, td,
+                article, aside, canvas, details, figcaption, figure, 
+                footer, header, hgroup, menu, nav, section, summary,
+                time, mark, audio, video {
+                    margin:0;
+                    padding:0;
+                    border:0;
+                    outline:0;
+                    font-size:100%;
+                    vertical-align:baseline;
+                    background:transparent;
+                }
+
+                body {
+                    line-height:1;
+                    font-family: 'calibril';
+                }
+                
+                /*Bring in an external font**/
+                @font-face {
                 font-family: 'calibril';
                 src: url('./font/calibril.eot'); /* IE9 Compat Modes */
                 src: url('./font/calibril.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -21,7 +48,66 @@
 
             #container{
                 width: 800px;
+                margin: auto;
             }
+            h1{
+                font-size: 1.7em;
+                text-align: center;
+                line-height: 1.2
+            }
+            h2{
+                font-size: 1.4em;
+                text-align: center;
+                font-weight: 300;
+                line-height: 1.2
+            }
+            main{
+                margin-top: 30px;
+                
+            }
+            img[src*="filestructure"]{
+                display: block;
+                margin: auto;
+                margin-top: 22px;
+            }
+            hr {
+                background-color: black;
+                height:1px
+            }
+
+        
+            ol {
+
+                margin-top: 13px;
+                margin-left: 38px;
+            }
+            li {
+                line-height: 2.2em;
+
+            }
+
+            input[type="text"]{
+                border: none;
+                border-bottom: 1px solid black;
+                margin-left: 14px
+            }
+
+            input:focus{
+                outline: none;
+            }
+
+            #foot_struct{
+                height: 100px;
+                width: 100%;
+                margin-top: 22px;
+                background-color: rgb(191, 191, 191);
+            }
+
+            #foot_struct img {
+                float: right;
+                margin-top: 35px;
+            }
+
         </style>
     </head>
     <body>
@@ -32,18 +118,20 @@
                 <h2>Allotted Time: 10 minutes | Difficulty Level: Beginner | 5 questions</h2>
             </header>
             <main>
-                <p style="font-weight: 900;">Directions: This assignment will focus on understanding relative and absolute file paths. Please use the diagram below to fill
+                <p style="font-weight: 900; font-size: 18px">Directions: This assignment will focus on understanding relative and absolute file paths. Please use the diagram below to fill
                     in the correct file path for each of the 5 questions below.</p>
-                <img src="" alt="picture of folder structure">
+                <img src="img/filestructure.png" alt="picture of folder structure">
                 <hr>
                 <ol>
-                    <li>What is the relative file path to bg.jpg file from index.html file?</li>
-                    <li>What is the relative file path to logo.png file from index.html file? </li>
-                    <li>What is the relative file path to minimize.js from index.html file?</li>
+                    <li>What is the relative file path to bg.jpg file from index.html file?<input type="text" size="35"></li>
+                    <li>What is the relative file path to logo.png file from index.html file?<input type="text" size="35"> </li>
+                    <li>What is the relative file path to minimize.js from index.html file?<input type="text" size="35"></li>
+                    <li>What is the relative file path to style.css from index.html?<input type="text" size="35"></li>
+                    <li>What is the relative file path to banner.jpg from contact.html file?<input type="text" size="35"></li>
                 </ol>
             </main>
-            <footer>
-                <img src="" alt="Page logo">
+            <footer id="foot_struct">
+                <img src="img/itworksheets_logo.png" width="300" alt="Page logo">
             </footer>
         </div><!--closing container tag-->
     </body>
